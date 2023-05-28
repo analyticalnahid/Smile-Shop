@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
-// import { LinkContainer } from "react-router-bootstrap";
+import { LinkContainer } from "react-router-bootstrap";
 
 function Header() {
   return (
@@ -13,18 +13,18 @@ function Header() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ml-auto">
-              <a href="/cart">
+              <LinkContainer to="/cart">
                 <Nav.Link>
                   <i className="fas fa-shopping-cart"></i>
                   Cart
                 </Nav.Link>
-              </a>
-              <a href="/login">
+              </LinkContainer>
+              <LinkContainer to="/login">
                 <Nav.Link>
                   <i className="fas fa-user"></i>
                   Login
                 </Nav.Link>
-              </a>
+              </LinkContainer>
             </Nav>
           </Navbar.Collapse>
         </Container>
